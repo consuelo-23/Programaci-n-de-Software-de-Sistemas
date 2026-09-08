@@ -1,7 +1,7 @@
 // estructura de datos como árbol binario
 
 #include <stdio.h>
-#include <stdlin.h> // necesario para malloc() y free()
+#include <stdlib.h> // necesario para malloc() y free()
 
 // 5. Estructuras complejas en C --> typedef
  // Oopción B
