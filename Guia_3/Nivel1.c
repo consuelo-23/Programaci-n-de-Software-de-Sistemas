@@ -18,7 +18,7 @@ int low_high(int numbers[10], int *menor, int *mayor) {
     *menor = numbers[0];
     *mayor = numbers[0];
 
-    for (int i=0; i<= 10; i++) {
+    for (int i=0; i< 10; i++) {
         if (numbers[i] < *menor) {
             *menor = numbers[i];
         }
@@ -34,8 +34,8 @@ int low_high(int numbers[10], int *menor, int *mayor) {
 int main() {
     binary_rep(257);
 
-    int mi_menor = 2147483647 ;
-    int mi_mayor = -2147483648 ;
+    int mi_menor = 2147483 ;
+    int mi_mayor = -2147483 ;
 
     int array1[10] = {1,3,22,4,566,3,-9, 223, 43, 10};
     low_high(array1, &mi_menor, &mi_mayor);
