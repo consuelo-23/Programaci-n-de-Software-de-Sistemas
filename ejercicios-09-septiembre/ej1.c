@@ -22,8 +22,8 @@ primero: tengo que crear un árbol
 typedef struct Node {
     char op;
     int val;
-    struct nodo *left;
-    struct nodo *right;
+    struct Node *left;
+    struct Node *right;
 }Node;
 
 Node* crear_nodo(char op, int val, Node *l, Node *r) {
@@ -64,5 +64,11 @@ int main() {
     Node *raiz = crear_nodo('*', 0, n_mas, n2);
 
     printf("Resultado de la expresión: %d\n", evaluar(raiz));
+
+    free(n3);
+    free(n5);
+    free(n_mas);
+    free(n2);
+    free(raiz);
     return 0;
 }
