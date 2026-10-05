@@ -2,20 +2,31 @@
 
 int main(int argc, char *argv[]) {
     if (argc != 3) {
-        printf("Error: sólo se admiten dos argumentos");
+        printf("Se admiten dos argumentos, ni más ni menos");
         return 1;
     }
+
+    if (argv[1][0] == '\0' || argv[2][0] == '\0') {
+        printf("Debe ingresar dos caracteres");
+        return 1;
+    }
+
+    if (argv[1][1] != '\0' || argv[2][1] != '\0') {
+        printf("Debe ingresar caracteres unitarios, no palabras o frases");
+        return 1;
+    }
+
 
     char objetivo = argv[1][0];
     char reemplazo = argv[2][0];
 
-    char palabra;
-    printf("Introduzca una palabra o frase: ");
-    scanf("%c", &palabra -1);
+
+    printf("Ahora, introduzca una palabra o frase: ");
+    
     
     int actual;
 
-    while ((actual = getchar()) != EOF) {
+    while ((actual = getchar()) != '\n') {
         if (actual == objetivo) {
             putchar(reemplazo);
         }
