@@ -1,3 +1,54 @@
+/*Pregunta 1*/
+
+#include <stdio.h>
+
+char main(int argc, char *argv[]) {
+    if (argc != 3) { // parchamos si es que entregan más o menos de 2 argumentos al llamar la función
+        printf("Se admiten dos argumentos, ni más ni menos\n");
+        return 1;
+    }
+
+    if (argv[1][1] != '\0' || argv[2][1] != '\0') { // parchar si ingresan strings o carácteres especiales
+        printf("Debe ingresar caracteres unitarios, no palabras o frases\n");
+        return 1;
+    }
+
+    // definimos el carácter objetivo como el primer argumento
+    char objetivo = argv[1][0]; 
+    char reemplazo = argv[2][0];
+    // y el carácter de reemplazo como el segundo argumento
+
+    // instrucción de introducir el texto
+    printf("Ahora, introduzca una palabra o frase: ");
+    
+    // definimos como carácter el actual que se lee en el momento
+    char actual;
+
+    while ((actual = getchar()) != '\n') { //mientras el carácter actual no sea el último del string
+        if (actual == objetivo) {
+            putchar(reemplazo); // si es igual al carácter objetivo, lo reemplazamos por el de reemplazo
+        }
+        if (actual != objetivo) {
+            putchar(actual); // si no es el objetivo, lo printeamos nomás tal cual
+        }
+        
+    }
+    return 0;
+}
+
+
+
+
+
+/*Pregunta 2
+
+input debe ser
+./Pregunta_2 palabra < texto.txt
+para poder leer el archivo de texto
+
+no se me ocurrió de otra forma*/
+
+
 #include <stdio.h>
 #include <string.h>
 
@@ -64,3 +115,16 @@ int main(int argc, char *argv[]) {
     printf("%d", counter);
     return 0;
 }
+
+
+
+
+/*Texto utilizado para la pregunta 2
+Hola me llamo Consuelo, escribo este archivo de texto para probar mi código
+hola hola
+bonjour
+hello hola bonjour nihao
+nihao annyeong hi
+hi hello
+hola hola hi annyeong
+hola, que tal*/
