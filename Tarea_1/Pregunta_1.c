@@ -6,12 +6,7 @@ char main(int argc, char *argv[]) {
         return 1;
     }
 
-    if (argv[1][0] == '\0' || argv[2][0] == '\0') { // parchar si no ingresan los 2 argumentos
-        printf("Debe ingresar dos caracteres\n");
-        return 1;
-    }
-
-    if (argv[1][1] != '\0' || argv[2][1] != '\0') { // parchar si ingresan strings
+    if (argv[1][1] != '\0' || argv[2][1] != '\0') { // parchar si ingresan strings o carácteres especiales
         printf("Debe ingresar caracteres unitarios, no palabras o frases\n");
         return 1;
     }
