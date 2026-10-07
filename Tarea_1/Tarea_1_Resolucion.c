@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-char main(int argc, char *argv[]) {
+int main(int argc, char *argv[]) {
     if (argc != 3) { // parchamos si es que entregan más o menos de 2 argumentos al llamar la función
         printf("Se admiten dos argumentos, ni más ni menos\n");
         return 1;
