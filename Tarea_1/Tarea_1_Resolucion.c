@@ -78,11 +78,6 @@ int main(int argc, char *argv[]) {
 
 
     while (fgets(linea, sizeof(linea), stdin) != NULL) { //mientras la línea a leer no sea nula
-        printf("%s", linea); // printear para chequear qué estoy leyendo
-
-        if (linea[0] == '\n') { //si la línea parte por un salto de línea, termino
-            break; //rompe el bucle y termina
-        }
 
         char word[1234] = ""; //definimos el char word como la palabra que vamos a leer
 
